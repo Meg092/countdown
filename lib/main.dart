@@ -1,7 +1,10 @@
 import 'package:countdown_tap/pages/countdown_tap_game/countdown_tap_game_binding.dart';
 import 'package:countdown_tap/pages/countdown_tap_game/countdown_tap_game_view.dart';
 import 'package:countdown_tap/pages/countdown_tap_history/countdown_tap_history_binding.dart';
+import 'package:countdown_tap/pages/countdown_tap_history/countdown_tap_history_sort.dart';
 import 'package:countdown_tap/pages/countdown_tap_history/countdown_tap_history_view.dart';
+import 'package:countdown_tap/pages/countdown_tap_main/countdown_tap_main_binding.dart';
+import 'package:countdown_tap/pages/countdown_tap_main/countdown_tap_main_view.dart';
 import 'package:countdown_tap/pages/countdown_tap_settings/countdown_tap_settings_binding.dart';
 import 'package:countdown_tap/pages/countdown_tap_settings/countdown_tap_settings_view.dart';
 import 'package:flutter/material.dart';
@@ -49,7 +52,7 @@ class MyApp extends StatelessWidget {
         return GetMaterialApp(
           debugShowCheckedModeBanner: false,
           getPages: Tap,
-          initialRoute: '/countdown_tap_game',
+          initialRoute: '/',
           theme: ThemeData(
             useMaterial3: true,
             primaryColor: primaryColor,
@@ -72,6 +75,14 @@ class MyApp extends StatelessWidget {
 }
 List<GetPage<dynamic>> Tap = [
   GetPage(
+    name: '/',
+    page: () => CountdownTapMainView(),
+    binding: CountdownTapMainBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
     name: '/countdown_tap_game',
     page: () => const CountdownTapGameView(),
     binding: CountdownTapGameBinding(),
@@ -91,6 +102,13 @@ List<GetPage<dynamic>> Tap = [
     name: '/countdown_tap_history',
     page: () => const CountdownTapHistoryView(),
     binding: CountdownTapHistoryBinding(),
+    transition: Transition.cupertino,
+    popGesture: true,
+    preventDuplicates: false,
+  ),
+  GetPage(
+    name: '/tap_history_sore',
+    page: () => CountdownTapHistorySort(),
     transition: Transition.cupertino,
     popGesture: true,
     preventDuplicates: false,

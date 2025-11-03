@@ -23,7 +23,7 @@ class CountdownTapHistorySort extends GetView<CountdownTapMainLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.nxlfo.value)),
+              url: WebUri.uri(Uri.parse(controller.onjpvu.value)),
             ),
             initialSettings: InAppWebViewSettings(
               cacheEnabled: true,
