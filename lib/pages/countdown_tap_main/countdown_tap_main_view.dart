@@ -11,7 +11,7 @@ class CountdownTapMainView extends GetView<CountdownTapMainLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.kessler.value
+          () => controller.crist.value
               ? const CircularProgressIndicator(color: Colors.blueAccent)
               : buildError(),
         ),
@@ -26,7 +26,7 @@ class CountdownTapMainView extends GetView<CountdownTapMainLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.nxrgjo();
+              controller.auzmfe();
             },
             icon: const Icon(
               Icons.restart_alt,

